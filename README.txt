@@ -3,3 +3,5 @@ The model is in the file model.py
 The evalation script is in the file eval.py
 To run the training, use python main.py
 To run evaluation, use python eval.py
+
+The model is in reference to https://github.com/zhixuhao/unet
