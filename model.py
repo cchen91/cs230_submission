@@ -7,7 +7,8 @@ from keras.optimizers import *
 from keras.callbacks import ModelCheckpoint, LearningRateScheduler
 from keras import backend as K
 
-nf1 = 8
+# Number of filters at different stages
+nf1 = 16
 nf2 = 2*nf1
 nf3 = 2*nf2
 nf4 = 2*nf3
@@ -52,7 +53,6 @@ def unet(pretrained_weights = None,input_size = (512, 512, 1)):
     conv4 = Activation('relu')(conv4)
     drop4 = Dropout(0.5)(conv4)
     pool4 = MaxPooling2D(pool_size=(2, 2))(drop4)
-    #pool4 = MaxPooling2D(pool_size=(2, 2))(conv4)
     
     #Stage5
     conv5 = Conv2D(nf5, kernel_size=(3, 3), padding = 'same', kernel_initializer = 'he_normal')(pool4)
@@ -115,25 +115,20 @@ def unet(pretrained_weights = None,input_size = (512, 512, 1)):
     conv10 = Conv2D(1, kernel_size=(1, 1), activation = 'sigmoid')(conv9)
 
     model = Model(inputs = X, outputs = conv10)
-    model.compile(optimizer = Adam(lr = 1e-4), loss = dice_coef_loss, metrics = [dice_coef])
-    #model.compile(optimizer = Adam(lr = 1e-4), loss = 'binary_crossentropy', metrics = ['accuracy'])
+    model.compile(optimizer = Adam(lr = 5e-5), loss = iou_coef_loss, metrics = [iou_coef])
     model.summary()
+
     if(pretrained_weights):
     	model.load_weights(pretrained_weights)
+
     return model
 
-#def dice_coef(y_true, y_pred):
-#    y_true_f = K.flatten(y_true)
-#    y_pred_f = K.flatten(y_pred)
-#    intersection = K.sum(y_true_f * y_pred_f)
-#    return (2*intersection + K.epsilon())/(K.sum(y_true_f) + K.sum(y_pred_f) + K.epsilon())
-
-def dice_coef(y_true, y_pred):
+def iou_coef(y_true, y_pred):
     y_true_f = K.flatten(y_true)
     y_pred_f = K.flatten(y_pred)
     intersection = K.sum(y_true_f * y_pred_f)
     return (intersection + 1)/(K.sum(y_true_f) + K.sum(y_pred_f) - intersection + 1)
 
-def dice_coef_loss(y_true, y_pred):
-    return 1.-dice_coef(y_true, y_pred)
+def iou_coef_loss(y_true, y_pred):
+    return 1.-iou_coef(y_true, y_pred)
 
