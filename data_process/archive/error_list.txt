@@ -1,0 +1,11 @@
+Error of ax: index 42; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/209/ax_324/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/209_ax_324_stanford_nml_seg.nii.gz.
+Error of ax: index 105; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/378/ax_839/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/378_ax_839_stanford_nml_seg.nii.gz.
+Error of ax: index 132; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/453/ax_1062/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/453_ax_1062_stanford_nml_seg.nii.gz.
+Error of ax: index 261; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/797/ax_2112/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/797_ax_2112_stanford_nml_seg.nii.gz.
+Error of cor: index 5; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/126/cor_226/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/126_cor_226_stanford_nml_seg.nii.gz.
+Error of cor: index 29; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/261/cor_486/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/261_cor_486_stanford_nml_seg.nii.gz.
+Error of cor: index 83; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/587/cor_1461/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/587_cor_1461_stanford_nml_seg.nii.gz.
+Error of sag: index 32; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/21/sag_326/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/21_sag_326_stanford_nml_seg.nii.gz.
+Error of sag: index 98; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/436/sag_1021/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/436_sag_1021_stanford_nml_seg.nii.gz.
+Error of sag: index 133; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/566/sag_1401/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/566_sag_1401_stanford_nml_seg.nii.gz.
+Error of sag: index 174; dicom directory is /data2/yeom/ky_fetal/Stanford_clean_series/743/sag_1929/; nifti files is /data2/yeom/ky_fetal/Stanford_segmentations/743_sag_1929_stanford_nml_seg.nii.gz.
