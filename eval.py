@@ -17,6 +17,7 @@ x_te = np.load(data_path+'x_te.npy')
 y_te = np.load(data_path+'y_te.npy')
 
 model = unet()
+#model = segnet()
 #model = load_model('model_trained.h5', custom_objects={'iou_coef_loss': iou_coef_loss, 'iou_coef': iou_coef})
 #model = load_model('model_trained.h5', custom_objects={'dice_coef_loss': dice_coef_loss, 'dice_coef': dice_coef})
 model = load_model('model_trained.h5')
